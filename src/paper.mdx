@@ -1,24 +1,24 @@
 ---
-title: Academic Project Page Template
+title: "TIPS: Thermal Image based Plastics Sorting"
 authors:
-  - name: Roman Hauksson
-    url: https://roman.technology
-    institution: University of Texas at Dallas
-    notes: ["*", †]
-  - name: Author Two
-    institution: Institution Two
-    notes: ["*", †]
-  - name: Author Three
-    institution: Institution Three
-    notes: ["*"]
-  - name: Author Four
-    institution: Institution Four
-conference: Conference Name
+  - name: Long Duong
+    url: https://dnl2k.github.io/
+    institution: University at Buffalo
+    #notes: ["*", †]
+  - name: Charuvahan Adhivarahan
+    institution: University at Buffalo
+    #notes: ["*", †]
+  - name: Roshan Ayyalasomayajula
+    institution: University at Buffalo
+    #notes: ["*"]
+  - name: Karthik Dantu
+    institution: University at Buffalo
+conference: MobiSys 2026
 notes:
-  - symbol: "*"
-    text: author note one
-  - symbol: †
-    text: author note two
+  #- symbol: "*"
+  #  text: author note one
+  #- symbol: †
+  #  text: author note two
 links:
   - name: Paper
     url: https://github.com/RomanHauksson/academic-project-astro-template
@@ -63,13 +63,83 @@ import dogsDiffc from "./assets/dogs-diffc.png"
 import dogsTrue from "./assets/dogs-true.png"
 import dogsMsillm from "@/assets/dogs-msillm.jpg"
 
+import HDPE from "./assets/output_video_HDPE.mp4";
+import LDPE from "./assets/output_video_LDPE.mp4";
+import PP from "./assets/output_video_PP.mp4";
+import PS from "./assets/output_video_PS.mp4";
+import PVC from "./assets/output_video_PVC.mp4";
+
 <Video src={outside} />
+
+## Videos of some measurements
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-6">
+  <div class="xl:col-span-2">
+    <video
+      class="w-full h-auto rounded-lg"
+      src={HDPE}
+      controls
+      playsinline
+      muted
+      autoplay
+      loop
+    />
+  </div>
+
+  <div class="xl:col-span-2">
+    <video
+      class="w-full h-auto rounded-lg"
+      src={LDPE}
+      controls
+      playsinline
+      muted
+      autoplay
+      loop
+    />
+  </div>
+
+  <div class="xl:col-span-2">
+    <video
+      class="w-full h-auto rounded-lg"
+      src={PP}
+      controls
+      playsinline
+      muted
+      autoplay
+      loop
+    />
+  </div>
+
+  <div class="xl:col-span-2 xl:col-start-2">
+    <video
+      class="w-full h-auto rounded-lg"
+      src={PS}
+      controls
+      playsinline
+      muted
+      autoplay
+      loop
+    />
+  </div>
+
+  <div class="xl:col-span-2 xl:col-start-4">
+    <video
+      class="w-full h-auto rounded-lg"
+      src={PVC}
+      controls
+      playsinline
+      muted
+      autoplay
+      loop
+    />
+  </div>
+</div>
 
 <HighlightedSection>
 
 ## Abstract
 
-This is a template you can use to create a professional project page for your research paper. [See the code for the template and instructions on how to use it yourself on GitHub](https://github.com/RomanHauksson/academic-project-astro-template). It's made with the [Astro web framework](https://astro.build/) and styled with [Tailwind](https://tailwindcss.com/). You write the content in [MDX](https://mdxjs.com/), which enables markdown formatting like **bold**, _italics_, and ~strikethrough~, as well as custom components like <SmallCaps>small caps.</SmallCaps>
+Plastics recycling is a critical ecological and economic solution to manage plastic waste, yet a staggering proportion of plastics from daily use is landfilled or incinerated. A critical step to recycling plastics is our ability to sort plastics by type (HDPE, LDPE, PET, PP, PS, and PVC) at a mixed recycling facility. However, challenges such as sensor system cost, difficulty in data collection, and the dense sampling required for model fine-tuning continue to hinder reliable large-scale deployment and limit progress toward a sustainable circular plastic economy. In this work, we propose a novel physics-informed plastics classification system based on active thermal imaging. Additionally, we present a two-stage training strategy that uses a large quantity of easily generated PDE-based simulated samples for pretraining and fine-tunes the model to real-world data distributions using only a sparse set of samples. We validate the efficacy of the proposed approach on real-world plastic samples.
+Thus, we introduce Thermal Image based Plastics Sorting (TIPS), a system that achieves up to **100%** and **94.7%** accuracy in plastic type classification for black and white plastics, respectively.
 
 </HighlightedSection>
 
